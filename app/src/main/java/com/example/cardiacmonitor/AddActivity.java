@@ -63,8 +63,8 @@ public class AddActivity extends AppCompatActivity {
 
         if(!TextUtils.isEmpty(time_input.getText())) {
             if (!TextUtils.isEmpty(date_input.getText())) {
-                if ((Integer.parseInt(systolic_input.getText().toString()) >= 0) && (Integer.parseInt(systolic_input.getText().toString()) <= 200) && (!TextUtils.isEmpty(systolic_input.getText()))) {
-                    if ((Integer.parseInt(diastolic_input.getText().toString()) >= 0) && (Integer.parseInt(diastolic_input.getText().toString()) <= 150) && (!TextUtils.isEmpty(diastolic_input.getText()))) {
+                if ((Integer.parseInt(systolic_input.getText().toString()) >= 90) && (Integer.parseInt(systolic_input.getText().toString()) <= 140) && (!TextUtils.isEmpty(systolic_input.getText()))) {
+                    if ((Integer.parseInt(diastolic_input.getText().toString()) >= 60) && (Integer.parseInt(diastolic_input.getText().toString()) <= 90) && (!TextUtils.isEmpty(diastolic_input.getText()))) {
                         if ((Integer.parseInt(heartrate_input.getText().toString()) >= 0) && (Integer.parseInt(heartrate_input.getText().toString()) <= 150) && (!TextUtils.isEmpty(heartrate_input.getText()))) {
 
                             date = date_input.getText().toString();
@@ -86,18 +86,18 @@ public class AddActivity extends AppCompatActivity {
                             finish();
 
                         } else {
-                            heartrate_input.setError("Invalid range ");
+                            heartrate_input.setError("Range between 0-150");
 
                             // Toast.makeText(DataEntry.this, "Invalid data format added", Toast.LENGTH_LONG).show();
 
                         }
 
                     } else {
-                        diastolic_input.setError("Invalid range");
+                        diastolic_input.setError("Range between 60-90");
                         //Toast.makeText(DataEntry.this, "Invalid data format added", Toast.LENGTH_LONG).show();
                     }
                 } else {
-                    systolic_input.setError("Invalid range");
+                    systolic_input.setError("Range between 90-140");
                     //Toast.makeText(DataEntry.this, "Invalid data format added", Toast.LENGTH_LONG).show();
                 }
             } else {
