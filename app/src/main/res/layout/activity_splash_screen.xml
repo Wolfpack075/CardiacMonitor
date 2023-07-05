@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/background"
     android:gravity="bottom|center"
-    tools:context=".activity.SplashActivity"
+    tools:context=".SplashActivity"
     android:id="@+id/splashScreen"
     android:orientation="horizontal"
     >
