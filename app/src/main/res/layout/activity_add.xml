@@ -1,9 +1,219 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/ic_background"
     tools:context=".AddActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="32dp"
+            android:text="Add Measurement:"
+            android:textColor="@color/black"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Date of Measurement:"
+            android:textColor="@color/black"
+            android:textSize="23sp"
+            app:layout_constraintStart_toStartOf="@+id/header"
+            app:layout_constraintTop_toBottomOf="@+id/header" />
+
+        <EditText
+            android:id="@+id/dateValue"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="38dp"
+            android:layout_marginEnd="30dp"
+            android:backgroundTint="@color/GhostWhite"
+            android:layout_marginTop="5dp"
+            android:background="@color/white"
+            android:hint="dd-mm-yy"
+            android:inputType="text"
+            android:padding="7dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/header"
+            app:layout_constraintTop_toBottomOf="@+id/date" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:text="Time of Measurement:"
+            android:textColor="@color/black"
+            android:textSize="23sp"
+            app:layout_constraintStart_toStartOf="@+id/header"
+            app:layout_constraintTop_toBottomOf="@+id/date" />
+
+        <EditText
+            android:id="@+id/timeValue"
+            android:backgroundTint="@color/GhostWhite"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="38dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/white"
+            android:hint="hh : mm"
+            android:inputType="text"
+            android:padding="7dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/header"
+            app:layout_constraintTop_toBottomOf="@+id/time" />
+
+        <TextView
+            android:id="@+id/systolic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:text="Systolic Pressure:"
+            android:textColor="@color/black"
+            android:textSize="23sp"
+            app:layout_constraintStart_toStartOf="@+id/header"
+            app:layout_constraintTop_toBottomOf="@+id/time" />
+
+        <EditText
+            android:id="@+id/systolicValue"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="38dp"
+            android:layout_marginEnd="30dp"
+            android:backgroundTint="@color/GhostWhite"
+            android:layout_marginTop="5dp"
+            android:background="@color/white"
+            android:hint="number"
+            android:inputType="number"
+            android:padding="7dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/header"
+            app:layout_constraintTop_toBottomOf="@+id/systolic" />
+
+        <TextView
+            android:id="@+id/diastolic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:text="Diastolic Pressure:"
+            android:textColor="@color/black"
+            android:textSize="23sp"
+            app:layout_constraintStart_toStartOf="@+id/header"
+            app:layout_constraintTop_toBottomOf="@+id/systolic" />
+
+        <EditText
+            android:id="@+id/diastolicValue"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="38dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/white"
+            android:hint="number"
+            android:inputType="number"
+            android:padding="7dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/header"
+            app:layout_constraintTop_toBottomOf="@+id/diastolic" />
+
+        <TextView
+            android:id="@+id/heartRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:text="Heart Rate:"
+            android:textColor="@color/black"
+            android:textSize="23sp"
+            app:layout_constraintStart_toStartOf="@+id/header"
+            app:layout_constraintTop_toBottomOf="@+id/diastolic" />
+
+        <EditText
+            android:id="@+id/heartRateValue"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="38dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="@color/GhostWhite"
+            android:background="@color/white"
+            android:hint="number"
+            android:inputType="number"
+            android:padding="7dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/header"
+            app:layout_constraintTop_toBottomOf="@+id/heartRate" />
+
+        <TextView
+            android:id="@+id/comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:text="Comment:"
+            android:textColor="@color/black"
+            android:textSize="23sp"
+            app:layout_constraintStart_toStartOf="@+id/header"
+            app:layout_constraintTop_toBottomOf="@+id/heartRate" />
+
+        <EditText
+            android:id="@+id/commentValue"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="38dp"
+            android:backgroundTint="@color/WhiteSmoke"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/white"
+            android:hint="Comment"
+            android:inputType="textMultiLine"
+            android:padding="7dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:lines="2"
+            app:layout_constraintStart_toStartOf="@+id/header"
+            app:layout_constraintTop_toBottomOf="@+id/comment"
+            />
+
+        <FrameLayout
+            android:id="@+id/updateFrameLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/commentValue"
+            android:backgroundTint="@color/Green"
+            android:layout_marginBottom="27dp"
+            tools:ignore="MissingConstraints">
+
+            <Button
+                android:id="@+id/addButton"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/Green"
+                android:text="Save"
+                android:textSize="16dp" />
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
